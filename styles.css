@@ -5,12 +5,14 @@
 
 body {
   background-color: var(--bg-color);
-  color: var(--text-color);
   font-family: 'Orbitron', monospace;
 }
 
 #username{
     padding: 10px;
+    font-size: 3.2rem;
+    font-family: 'VT323', monospace;
+    color: var(--text-color);
 }
 
 nav{
@@ -31,12 +33,6 @@ nav{
   --neon-blue-hover: #00BFFF;
   --muted-text: #888;
   --accent-pink: #FF0080;
-}
-
-nav #username {
-  color: var(--neon-blue);
-  font-size: 2rem;
-  text-shadow: 0 0 10px var(--neon-blue);
 }
 
 nav a {
@@ -112,12 +108,72 @@ nav ul {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: -1; /* Lower than content */
-  background: #000000; /* Or any background color/image */
+  z-index: -1; 
+  background: #000000; 
 }
-/* Fix z-index value for #particles-js */
+
 #content {
   position: relative;
-  z-index: 20; /* Ensure content is above particles */
+  z-index: 20; 
   padding: 20px;
+  display: flex;
+}
+
+ .hero {
+  padding: 10px;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 80%;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  background: transparent;
+  backdrop-filter: blur(4px);
+  border: 7px transparent solid;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  
+} 
+.hero-text{
+    font-size: 2rem;
+    color: var(--text-color);
+    text-align: left;
+    padding: 20px;
+    font-family: 'Orbitron', monospace;
+    z-index: 20;
+    border-radius: 15px;
+}
+.hero::before,.hero::after{
+    content: '';
+    position: absolute;
+}
+
+.hero::before {
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: conic-gradient(var(--neon-blue-hover) 0deg, transparent 60deg, transparent 180deg, var(--neon-blue-hover) 180deg, transparent 240deg);
+    z-index: -2;
+    animation: border-animation 15s linear infinite;
+    border-radius: 15px;
+    
+    
+}
+@keyframes border-animation {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.hero::after{
+    --inset:2px;
+    background: #111;
+    inset: var(--inset);
+    border-radius: 15px;
+    transition: all 0.5s linear;
 }
