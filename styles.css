@@ -105,3 +105,19 @@ nav ul {
     animation: blink 1.1s infinite steps(2, start); 
     text-shadow: 0 0 10px var(--neon-blue);
 }
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Lower than content */
+  background: #000000; /* Or any background color/image */
+}
+/* Fix z-index value for #particles-js */
+#content {
+  position: relative;
+  z-index: 20; /* Ensure content is above particles */
+  padding: 20px;
+}
