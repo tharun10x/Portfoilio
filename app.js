@@ -11,4 +11,4 @@ fetch('version.json')
       console.error('Error loading version info:', error);
     });
 
-
+particlesJS('particles-js', particleConfig);
