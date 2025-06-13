@@ -13,6 +13,11 @@ body {
     font-size: 3.2rem;
     font-family: 'VT323', monospace;
     color: var(--text-color);
+    font-size: 3.2rem;
+    text-shadow: 0 0 10px var(--text-color);
+    transition: text-shadow 1.5s ease-in-out;
+    animation: text-shadow 1.7s infinite alternate;
+    
 }
 
 nav{
