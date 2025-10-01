@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@import "@fontsource/orbitron";
+@import "@fontsource/vt323/400.css";
+
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+body {
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0F0F1B; /* fallback behind particles */
+}
+#Name {
+  font-size: 2.5rem;  
+  color: #E6E6E6;
+  animation: glow 1.5s infinite alternate;
+}
+/* nav-link styles moved to index.css for global reuse */
+@keyframes glow{
+  0% {
+    text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 15px #00FFFF, 0 0 20px #00FFFF;
+  }
+  50% {
+    text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #a92195, 0 0 40px #00FFFF;
+  }
+  100% {
+    text-shadow: 0 0 15px #00FFFF, 0 0 30px #00FFFF, 0 0 45px #a92195, 0 0 60px #00FFFF;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

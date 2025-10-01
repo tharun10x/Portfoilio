@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Entrance + misc animations */
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(20px) scale(.95);} to { opacity:1; transform: translateY(0) scale(1);} }
+  @keyframes blink { 0%,100% { opacity:1 } 50% { opacity:0 } }
+  .animate-blink { animation: blink 1s step-end infinite; }
+  @keyframes cloud { 0% { background-position:0% 50% } 50% { background-position:100% 50% } 100% { background-position:0% 50% } }
+  .animate-cloud { animation: cloud 12s linear infinite; background: linear-gradient(270deg,#FF00C8,#66a6ff,#fbc2eb,#fad0c4); background-size:400% 400%; }
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(360deg); }
+  }.animate-rotate {
+    animation: rotate 1s linear infinite;
+  }
+  /* Custom Scrollbar (WebKit/Blink) */
+  ::-webkit-scrollbar { width: 15px; }
+  ::-webkit-scrollbar-track { background:#0f0f1b; }
+  ::-webkit-scrollbar-thumb { background: linear-gradient(#FF00C8,#BF00FF); border-radius: 8px; border: 2px solid #0f0f1b; }
+  ::-webkit-scrollbar-thumb:hover { background:#FF00C8; }
+  ::-webkit-scrollbar-thumb:active { background:#BF00FF; }
+
+  /* Attempt to show and style scrollbar buttons (only visible on some browsers / configs) */
+  ::-webkit-scrollbar-button { height:16px; width:12px; background:#161626; border:1px solid #262637; }
+  ::-webkit-scrollbar-button:hover { filter:brightness(1.3); }
+  ::-webkit-scrollbar-button:active { filter:brightness(0.8); }
+  
+  html { scrollbar-color: #BF00FF #0f0f1b; scrollbar-width: 10px; }
+}
+
+/* Global nav-link styles (plain CSS for compatibility) */
+.nav-link {
+  position: relative;
+  cursor: pointer;
+  color: #00FFFF;
+  transition: color 300ms;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  transform: translateX(-50%);
+  background-color: #00FFFF;
+  transition: width 300ms;
+}
+.nav-link:hover { color: #ffffff; }
+.nav-link:hover::after { width: 100%; }
+
+#plane{
+  display:hidden;
+  animation: translate 0.5s ease-out forwards;
+
+}
