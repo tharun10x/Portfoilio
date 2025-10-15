@@ -85,7 +85,9 @@ function Hero(){
         </motion.div>
         <div className="flex justify-center mt-8 sm:mt-10">
         <Arrow
-          onClick={() => scrollToId('about', 20)} className='hover:shadow-[0_0_25px_4px_#e6e6e6e]'  />
+          onClick={() => scrollToId('about', 20)}
+          className="hover:drop-shadow-[0_0_15px_#E6E6E6] transition duration-300"
+        />
       </div>
       </motion.div>
       
