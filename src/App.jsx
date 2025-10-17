@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar'
 import { scrollToId } from './utils/scroll'
 import ProfileCardComponent from './blocks/Components/ProfileCard/ProfileCard'
 import About from './Components/About'
+import Footer from './Components/footer'
   
 
 function App() {
@@ -14,8 +15,8 @@ function App() {
       <Bg />
       <Navbar />
 
-      <main style={{ position: 'relative', zIndex: 1 }} id="home" role="main">
-        <Hero />
+      <main style={{ position: 'relative', zIndex: 1, marginTop: '40px' }} id="home" role="main">
+        <Hero  className="" />
         
       </main>
 
@@ -29,8 +30,9 @@ function App() {
         
       </section>
        
-      <section id="contact" className="min-h-[50vh]" aria-label="Contact section" />
-      <div className="w-full" style={{ height: '2px', backgroundColor: '#5c5c5cff' }} />
+      <section id="contact" className="min-h-[50vh] w-full static" aria-label="Contact section" />
+      <Footer className="absolute bottom-4 left-0 right-0" />
+      
 
     </>
     

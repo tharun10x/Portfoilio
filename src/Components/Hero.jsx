@@ -29,7 +29,7 @@ function Hero(){
           variants={childVariants}
           className="mt-5 text-xl font-sans md:text-2xl lg:text-[28px] text-[#E6E6E6] font-medium leading-relaxed max-w-3xl mx-auto"
         >
-          A passionate <span className='font-bold text-[#FF00C6]'>Frontend Developer </span>who loves building interactive <span className='text-[#FF00C6]'>UI</span>, exploring <span className='font-bold text-[#BF00FF]'>Machine Learning</span> and I'm a tech enthusiast
+          A passionate <span className='font-bold text-[#FF00C6]'>Frontend Developer </span>who loves building interactive <span className='text-[#FF00C6]'>UI</span>, exploring <span className='font-bold text-[#BF00FF]'>Machine Learning</span> 
         </motion.p>
     <div className="mt-15 text-[15px] flex flex-wrap items-center justify-center gap-3 sm:gap-4">
           {/* contact */}
