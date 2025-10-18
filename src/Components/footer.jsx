@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="w-full text-center py-4 mt-8">
-    <div className="wrapper w-full   text-left flex justify-between gap-15">
+    <div className="wrapper w-1/2  text-left flex justify-around gap-1">
         <div className="self">
             <h1 className="text-xl font-bold text-[#E6E6E6] mb-2">
                 Tharun Prasad K.
