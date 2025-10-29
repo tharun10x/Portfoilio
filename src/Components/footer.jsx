@@ -87,6 +87,11 @@ export default function Footer() {
               <li><a className="text-gray-400 hover:text-gray-200 transition" href="#contact">Contact</a></li>
             </ul>
           </div>
+          <div className="contact">
+            <h2 className="text-2xl text-[#E6E6E6] mb-2">Contact</h2>
+            <p className="text-gray-400 text-lg">Feel free to reach out!</p>
+            <a href=""></a>
+          </div>
         </div>
 
         <div className="border-t border-[#5c5c5cff] mt-8 pt-6" />
