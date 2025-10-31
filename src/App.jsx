@@ -1,12 +1,12 @@
 import './App.css'
+import { lazy, Suspense } from 'react'
 import Bg from './Components/Bg'
 import Hero from './Components/Hero'
 import Navbar from './Components/Navbar'
-import { scrollToId } from './utils/scroll'
-import ProfileCardComponent from './blocks/Components/ProfileCard/ProfileCard'
 import About from './Components/About'
 import Footer from './Components/footer'
-  
+
+const ProfileCardComponent = lazy(() => import('./blocks/Components/ProfileCard/ProfileCard'))
 
 function App() {
   return (
@@ -21,7 +21,9 @@ function App() {
       </main>
 
       <section id="about" className="about static mt-20 max-w-4xl mx-auto px-6 leading-relaxed text-[#E6E6E6] flex items-center justify-center min-h-[50vh]" aria-label="About section">
-        <ProfileCardComponent className='mt-20 absolute left-80' />
+        <Suspense fallback={<div aria-busy="true" aria-label="Loading profile card" />}>
+          <ProfileCardComponent className='mt-20 absolute left-80' />
+        </Suspense>
         <About />
       </section>
       <section id="skills" className="min-h-[50vh]" aria-label="Skills section" />

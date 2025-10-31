@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import { useState, memo } from 'react'
 import { motion } from 'framer-motion'
 
-function Arrow({ color = '#E6E6E6', hoverColor = '#ffffff', onClick, className = '' }) {
+const Arrow = memo(function Arrow({ color = '#E6E6E6', hoverColor = '#ffffff', onClick, className = '' }) {
   const [isHover, setIsHover] = useState(false)
+  
   return (
     <motion.svg
       initial={{ opacity: 0, y: 30, scale: 0.9 }}
@@ -30,5 +31,6 @@ function Arrow({ color = '#E6E6E6', hoverColor = '#ffffff', onClick, className =
       />
     </motion.svg>
   );
-}
+});
+
 export default Arrow

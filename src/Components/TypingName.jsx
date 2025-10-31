@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 
+const name = "Tharun Prasad";
+
 const TypingName = () => {
   const [text, setText] = useState("");
-  const name = "Tharun Prasad";
 
   useEffect(() => {
     let i = 0;

@@ -1,4 +1,6 @@
-export default function Button({ variant = 'primary', size = 'md', className = '', ...props }) {
+import { memo } from 'react';
+
+const Button = memo(function Button({ variant = 'primary', size = 'md', className = '', ...props }) {
   const base = 'inline-flex items-center justify-center gap-2 font-semibold font-sans rounded-xl transition duration-300 transform hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring focus-visible:ring-[#FF00C8]/15';
   const sizes = {
     sm: 'text-sm px-3 py-1.5',
@@ -12,4 +14,6 @@ export default function Button({ variant = 'primary', size = 'md', className = '
   return (
     <button className={`${base} ${sizes[size] || sizes.md} ${variants[variant] || ''} ${className}`} {...props} />
   );
-}
+});
+
+export default Button;
