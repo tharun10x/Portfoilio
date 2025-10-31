@@ -21,7 +21,7 @@ function App() {
       </main>
 
       <section id="about" className="about static mt-20 max-w-4xl mx-auto px-6 leading-relaxed text-[#E6E6E6] flex items-center justify-center min-h-[50vh]" aria-label="About section">
-        <Suspense fallback={<div />}>
+        <Suspense fallback={<div aria-busy="true" aria-label="Loading profile card" />}>
           <ProfileCardComponent className='mt-20 absolute left-80' />
         </Suspense>
         <About />

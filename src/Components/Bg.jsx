@@ -2,8 +2,6 @@ import { useEffect } from 'react';
 
 const Bg = () => {
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-    
     if (window.particlesJS) {
       window.particlesJS.load('particles-js', 'particles-js.json', () => {
         if (import.meta.env.DEV) {
