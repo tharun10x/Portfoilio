@@ -4,3 +4,5 @@ export { FiLinkedin, FiInstagram } from 'react-icons/fi';
 export { HiMail } from 'react-icons/hi';
 export { FaDiagramProject } from 'react-icons/fa6';
 export { FaPaperPlane } from 'react-icons/fa';
+export { CiMail } from "react-icons/ci";
+export { FaLinkedin } from "react-icons/fa6";

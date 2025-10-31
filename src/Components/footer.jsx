@@ -1,3 +1,5 @@
+import {  CiMail } from '../icons'
+import {  FaLinkedin } from '../icons'
 export default function Footer() {
   return (
     <footer className="w-full py-8 mt-8" aria-label="Footer">
@@ -59,17 +61,7 @@ export default function Footer() {
                 aria-label="LinkedIn"
                 className="text-gray-400 hover:text-gray-200 transition"
               >
-                <svg
-                  width="30"
-                  height="30"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <rect x="2" y="2" width="20" height="20" rx="2" stroke="currentColor" strokeWidth="1.2"/>
-                  <path d="M7.5 10.5v6H5V10.5h2.5zM6.25 9.25a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5zM12 10.5v1.1c.33-.6 1.05-1.2 2.2-1.2 2.35 0 2.78 1.55 2.78 3.57V16.5h-2.5v-2.45c0-.58-.01-1.33-.82-1.33-.82 0-.95.64-.95 1.29V16.5H12v-6z" fill="currentColor"/>
-                </svg>
+                <FaLinkedin size={30} />
               </a>
               <br />
               
@@ -89,8 +81,15 @@ export default function Footer() {
           </div>
           <div className="contact">
             <h2 className="text-2xl text-[#E6E6E6] mb-2">Contact</h2>
-            <p className="text-gray-400 text-lg">Feel free to reach out!</p>
-            <a href=""></a>
+            <p className="text-gray-400 text-[15px]">Feel free to reach out!</p>
+            <a
+              href="mailto:tharunprasad.k@gmail.com"
+              aria-label="Email"
+              className="text-[#E6E6E6] hover:text-[#FF00C8] ease-in-out duration-200 flex items-center gap-2"
+            >
+              <CiMail className="inline-block text-[#FF00C8]" />
+              <span>tharunprasad.k@gmail.com</span>
+            </a>
           </div>
         </div>
 
