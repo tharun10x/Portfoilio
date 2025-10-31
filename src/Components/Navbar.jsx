@@ -27,7 +27,7 @@ function Navbar() {
       initial={{ opacity: 0, y: 24, filter: 'blur(6px)' }}
       animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
       transition={{ type: 'spring', stiffness: 90, damping: 16, mass: 1 }}
-  className="sticky top-2 md:top-1 z-50 flex w-full items-center justify-between gap-x-4 md:gap-x-10 lg:gap-x-12 text-xl lg:text-3xl py-2 px-4 sm:px-6 lg:px-8 pr-14 border border-white/5 bg-white/3 backdrop-blur-lg rounded-xl"
+  className="sticky top-2 md:top-1 z-50 flex w-[1280px] mx-auto items-center justify-between gap-x-4 md:gap-x-10 lg:gap-x-12 text-xl lg:text-3xl py-2 px-4 sm:px-6 lg:px-8 pr-14 border border-white/5 bg-white/3 backdrop-blur-lg rounded-xl"
     >
   <span className=" text-[#E6E6E6] text-3xl md:text-4xl font-[vt323] whitespace-nowrap">Tharun.10x<span className="animate-blink">_</span></span>
     <nav className="hidden md:block">
