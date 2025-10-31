@@ -31,8 +31,8 @@ function App() {
         {/* <WorkInProgress /> */}
         
       </section>
-       
-      <section id="contact" className="min-h-[50vh] w-full static" aria-label="Contact section" />
+      <section id="contact" className="min-h-[50vh] w-full static" bg- aria-label="Contact section">
+      </section>
       <Footer className="absolute bottom-4 left-0 right-0" />
       
 
