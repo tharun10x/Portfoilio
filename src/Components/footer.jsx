@@ -90,7 +90,6 @@ export default function Footer() {
           <div className="contact">
             <h2 className="text-2xl text-[#E6E6E6] mb-2">Contact</h2>
             <p className="text-gray-400 text-lg">Feel free to reach out!</p>
-            <a href=""></a>
           </div>
         </div>
 

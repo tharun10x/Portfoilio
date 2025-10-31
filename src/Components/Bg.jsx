@@ -2,12 +2,16 @@ import { useEffect } from 'react';
 
 const Bg = () => {
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
     if (window.particlesJS) {
       window.particlesJS.load('particles-js', 'particles-js.json', () => {
-        console.log('Particles.js loaded');
+        if (import.meta.env.DEV) {
+          console.log('Particles.js loaded');
+        }
       });
-    } else {
-      console.error('particlesJS not found. Make sure the CDN is added in public/index.html');
+    } else if (import.meta.env.DEV) {
+      console.error('particlesJS not found. Make sure the CDN is added in index.html');
     }
   }, []);
 

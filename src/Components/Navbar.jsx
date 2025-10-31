@@ -2,24 +2,26 @@ import { motion, AnimatePresence} from 'framer-motion'
 import { scrollToId } from '../utils/scroll'
 import { GiHamburgerMenu } from 'react-icons/gi';
 import Menu from './Menu'
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { LuX } from 'react-icons/lu';
-import { style } from 'framer-motion/client';
-
-const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
-];
+import { NAV_LINKS } from '../constants/navigation';
 
 function Navbar() {
   const [open, setOpen] = useState(false);
-  const handleClick = (e, href) => {
+  
+  const handleClick = useCallback((e, href) => {
     e.preventDefault();
     scrollToId(href.replace('#',''), 20)
-  };
+  }, []);
+  
+  const toggleMenu = useCallback(() => {
+    setOpen(v => !v);
+  }, []);
+  
+  const closeMenu = useCallback(() => {
+    setOpen(false);
+  }, []);
+  
   return (
   <motion.header role="navigation" aria-label="Primary"
       initial={{ opacity: 0, y: 24, filter: 'blur(6px)' }}
@@ -30,7 +32,7 @@ function Navbar() {
   <span className=" text-[#E6E6E6] text-3xl md:text-4xl font-[vt323] whitespace-nowrap">Tharun.10x<span className="animate-blink">_</span></span>
     <nav className="hidden md:block">
         <ul className="flex justify-between md:gap-4 lg:gap-8">
-          {navLinks.map((link) => (
+          {NAV_LINKS.map((link) => (
             <li key={link.label}>
               <a
                 href={link.href}
@@ -46,7 +48,7 @@ function Navbar() {
       <button
         className="md:hidden absolute right-4 top-1/2 -translate-y-1/2 shrink-0"
         type="button"
-        onClick={()=>setOpen(v=>!v)}
+        onClick={toggleMenu}
         aria-label={open ? 'Close menu' : 'Open menu'}
         aria-expanded={open}
         aria-controls="mobile-menu"
@@ -57,7 +59,7 @@ function Navbar() {
           <LuX className="font-bold text-[#00FFFF] inline in-focus:outline-2 in-focus:outline-white rounded-[4px] in-focus:shadow-amber-400 " />
         )}
       </button>
-        {open && <Menu id="mobile-menu" onClose={() => setOpen(false)} />}
+        {open && <Menu id="mobile-menu" onClose={closeMenu} />}
     </motion.header>
   );
 }
