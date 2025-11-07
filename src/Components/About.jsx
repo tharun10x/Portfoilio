@@ -1,9 +1,7 @@
 import React from 'react';
 import ProfileCardComponent from '../blocks/Components/ProfileCard/ProfileCard'
 
-function About(props) {
-  // Optional: hooks, logic, etc.
-
+function About() {
   return (
     <>
 

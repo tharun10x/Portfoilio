@@ -5,11 +5,17 @@ import Arrow from './Arrow'
 import Button from './ui/Button'
 import { buildVariants } from '../animations/variants'
 import TypingName from './TypingName'
+import { useCallback, useMemo } from 'react'
 
 function Hero(){
   const prefersReducedMotion = useReducedMotion()
-  const { containerVariants, childVariants, iconContainerVariants, iconItemVariants } = buildVariants(prefersReducedMotion)
-  const scrollTo = (id) => scrollToId(id, 20)
+  const variants = useMemo(() => buildVariants(prefersReducedMotion), [prefersReducedMotion])
+  const { containerVariants, childVariants, iconContainerVariants, iconItemVariants } = variants
+  
+  const scrollTo = useCallback((id) => {
+    scrollToId(id, 20)
+  }, []);
+  
   return (
     <>
       <motion.div

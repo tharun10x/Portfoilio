@@ -1,21 +1,16 @@
-import React from 'react';
+import { memo, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { scrollToId } from '../utils/scroll';
+import { NAV_LINKS } from '../constants/navigation';
 
-const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
-];
-function Menu({ id = 'mobile-menu', onClose }){
-    const handleClick = (e, href) => {
+const Menu = memo(function Menu({ id = 'mobile-menu', onClose }){
+    const handleClick = useCallback((e, href) => {
         e.preventDefault();
         scrollToId(href.replace('#',''), 20);
         onClose?.();
-    };
-            return (
+    }, [onClose]);
+    
+    return (
                 <nav id={id} aria-label="Mobile">
                     {/* Backdrop */}
                     <motion.button
@@ -37,7 +32,7 @@ function Menu({ id = 'mobile-menu', onClose }){
                         transition={{ type: 'spring', stiffness: 260, damping: 24 }}
                     >
                     <ul className="flex flex-col items-center gap-y-3 p-4">
-                {navLinks.map((link) => (
+                {NAV_LINKS.map((link) => (
                     <li key={link.label} className="w-full text-center">
                         <a
                             href={link.href}
@@ -52,6 +47,6 @@ function Menu({ id = 'mobile-menu', onClose }){
                     </motion.div>
             </nav>
     );
-}
+});
 
 export default Menu;
