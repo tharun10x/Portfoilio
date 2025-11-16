@@ -4,9 +4,9 @@ import { FaInstagram } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 export default function Footer() {
   return (
-    <footer className="w-full py-8 mt-8" aria-label="Footer">
-    <div className=" px-4 mx-0">
-        <div className="flex flex-col md:flex-row justify-around items-start gap-5">
+    <footer className="w-full py-8" aria-label="Footer">
+    <div className="px-4 mx-0">
+        <div className="flex flex-col md:flex-row w-[10%]justify-around items-start gap-5">
           <div className="branding">
             <h1 className="text-xl font-bold text-[#E6E6E6] mb-1">
               Tharun Prasad K.

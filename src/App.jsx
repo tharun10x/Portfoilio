@@ -1,12 +1,11 @@
 import './App.css'
-import { lazy} from 'react'
 import Bg from './Components/Bg'
 import Hero from './Components/Hero'
 import Navbar from './Components/Navbar'
 import About from './Components/About'
 import Footer from './Components/footer'
 
-const ProfileCardComponent = lazy(() => import('./blocks/Components/ProfileCard/ProfileCard'))
+
 
 function App() {
   return (
@@ -18,7 +17,7 @@ function App() {
         <Hero />
       </main>
 
-      <section id="about" className="about static mt-20 max-w-4xl mx-auto px-6 leading-relaxed text-[#E6E6E6] flex items-center justify-center min-h-[50vh]" aria-label="About section">
+      <section id="about" className="about static max-w-4xl mx-auto px-6 leading-relaxed text-[#E6E6E6] flex items-center justify-center min-h-[50vh]" aria-label="About section">
         
         <About />
       </section>
@@ -32,14 +31,14 @@ function App() {
         
       </section>
       
-      <section id="contact" className="min-h-[50vh] bg-amber-950 " aria-label="Contact section">
-        
-      </section>
-      <Footer />
-      <div className="max-w-[1500px] bg-amber-400">
-sdfg
+      {/* Combined matte black background section for contact and footer */}
+      <div className="w-screen bg-[#09090b] relative left-1/2 right-1/2 -mx-[50vw]">
+        <section id="contact" className="min-h-[50vh] w-full" aria-label="Contact section">
+          
+        </section>
+        <Footer />
       </div>
-      
+         
       
     </>
     

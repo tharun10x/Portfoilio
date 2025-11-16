@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const name = "Tharun Prasad";
+const name = "Tharun Prasad K";
 
 const TypingName = () => {
   const [text, setText] = useState("");

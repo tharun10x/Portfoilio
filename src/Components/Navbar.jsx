@@ -1,13 +1,25 @@
-import { motion, AnimatePresence} from 'framer-motion'
+import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion'
 import { scrollToId } from '../utils/scroll'
 import { GiHamburgerMenu } from 'react-icons/gi';
 import Menu from './Menu'
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { LuX } from 'react-icons/lu';
 import { NAV_LINKS } from '../constants/navigation';
 
 function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  
+  // Track scroll position for dynamic sizing
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setScrolled(scrollPosition > 50);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   
   const handleClick = useCallback((e, href) => {
     e.preventDefault();
@@ -25,11 +37,21 @@ function Navbar() {
   return (
   <motion.header role="navigation" aria-label="Primary"
       initial={{ opacity: 0, y: 24, filter: 'blur(6px)' }}
-      animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+      animate={{ 
+        opacity: 1, 
+        y: 0, 
+        filter: 'blur(0px)',
+        paddingTop: scrolled ? '0.5rem' : '0.5rem',
+        paddingBottom: scrolled ? '0.5rem' : '0.5rem'
+      }}
       transition={{ type: 'spring', stiffness: 90, damping: 16, mass: 1 }}
-  className="sticky top-2 md:top-1 z-50 flex w-[1280px] mx-auto items-center justify-between gap-x-4 md:gap-x-10 lg:gap-x-12 text-xl lg:text-3xl py-2 px-4 sm:px-6 lg:px-8 pr-14 border border-white/5 bg-white/3 backdrop-blur-lg rounded-xl"
+  className={`sticky top-2 md:top-1 z-50 flex w-[95%] sm:w-[90%] md:w-[85%] lg:w-[80%] xl:w-[1280px] max-w-[1400px] mx-auto items-center justify-between gap-x-4 md:gap-x-10 lg:gap-x-12 px-4 sm:px-6 lg:px-8 pr-14 border border-white/5 bg-white/3 backdrop-blur-lg rounded-xl transition-all duration-300 ${
+    scrolled ? 'text-lg lg:text-2xl py-1' : 'text-xl lg:text-3xl py-2'
+  }`}
     >
-  <span className=" text-[#E6E6E6] text-3xl md:text-4xl font-[vt323] whitespace-nowrap">Tharun.10x<span className="animate-blink">_</span></span>
+  <span className={`text-[#E6E6E6] font-[vt323] whitespace-nowrap transition-all duration-300 ${
+    scrolled ? 'text-2xl md:text-3xl' : 'text-3xl md:text-4xl'
+  }`}>Tharun.10x<span className="animate-blink">_</span></span>
     <nav className="hidden md:block">
         <ul className="flex justify-between md:gap-4 lg:gap-8">
           {NAV_LINKS.map((link) => (
