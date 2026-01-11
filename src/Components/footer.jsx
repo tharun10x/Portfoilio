@@ -5,8 +5,11 @@ import { FaGithub } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer className="w-full py-8" aria-label="Footer">
-    <div className="px-4 mx-0 flex justify-center gap-10">
-        <div className="flex flex-col md:flex-row justify-around items-start gap-35 ">
+    <div className="w-full mx-auto flex justify-center mb-5">
+        <div className="border-t border-[#5c5c5cff] w-full" />
+      </div>
+      <div className="w-full flex justify-center px-4">
+        <div className="flex flex-col md:flex-row justify-around items-start gap-35">
           <div className="branding">
             <h1 className="text-xl font-bold text-[#E6E6E6] mb-1">
               Tharun Prasad K.
@@ -34,7 +37,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/tharunprasadk/"
+                href="https://www.linkedin.com/in/tharunprasad"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -42,8 +45,6 @@ export default function Footer() {
               >
                 <FaLinkedin size={30} />
               </a>
-              <br />
-              
             </div>
             <p className="mt-3 text-gray-400 w-60">A passionate Frontend Developer who loves building interactive UIs</p>
           </div>
@@ -58,27 +59,29 @@ export default function Footer() {
               <li className='flex justify-start'><a className="text-gray-400 hover:text-gray-200 transition" href="#contact">Contact</a></li>
             </ul>
           </div>
-          <div className=" ">
-            <h2 className="text-2xl text-[#E6E6E6] mb-2 ">Contact</h2>
-            
+          <div>
+            <h2 className="text-2xl text-[#E6E6E6] mb-2">Contact</h2>
             <a
               href="mailto:tharunprasad.k@gmail.com"
               aria-label="Email"
-              className="text-[#E6E6E6] hover:text-[#FF00C8] ease-in-out duration-200 flex gap-2 "
+              className="text-[#E6E6E6] hover:text-[#FF00C8] ease-in-out duration-200 flex gap-2"
             >
               <CiMail className="flex text-[#FF00C8]" />
               <span>tharunprasad.k@gmail.com</span>
             </a>
           </div>
         </div>
-
-        <div className="border-t border-[#5c5c5cff] mt-8 pt-6" />
-
-          
       </div>
-      <p className="text-sm mt-4 text-gray-600 dark:text-gray-400 font-sans h-5">
-            &copy; {new Date().getFullYear()} Tharun Prasad K.
-      </p>
+
+      <div className="w-1/3 mx-auto flex justify-center mt-8">
+        <div className="border-t border-[#5c5c5cff] w-full" />
+      </div>
+      
+      <div className="flex justify-center">
+        <p className="text-sm mt-6 text-gray-600 dark:text-gray-400 font-sans">
+          &copy; {new Date().getFullYear()} Tharun Prasad K.
+        </p>
+      </div>
     </footer>
   );
 }
