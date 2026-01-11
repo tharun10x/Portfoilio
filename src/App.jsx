@@ -33,9 +33,7 @@ function App() {
       
       {/* Combined matte black background section for contact and footer */}
       <div className="w-screen bg-[#09090b] relative left-1/2 right-1/2 -mx-[50vw]">
-        <section id="contact" className="min-h-[50vh] w-full" aria-label="Contact section">
-          
-        </section>
+        
         <Footer />
       </div>
          

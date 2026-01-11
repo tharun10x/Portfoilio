@@ -5,8 +5,8 @@ import { FaGithub } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer className="w-full py-8" aria-label="Footer">
-    <div className="px-4 mx-0">
-        <div className="flex flex-col md:flex-row w-[10%]justify-around items-start gap-5">
+    <div className="px-4 mx-0 flex justify-center gap-10">
+        <div className="flex flex-col md:flex-row justify-around items-start gap-35 ">
           <div className="branding">
             <h1 className="text-xl font-bold text-[#E6E6E6] mb-1">
               Tharun Prasad K.
@@ -45,17 +45,17 @@ export default function Footer() {
               <br />
               
             </div>
-            <p className="mt-3 text-gray-400 w-48">A passionate Frontend Developer who loves building interactive UIs</p>
+            <p className="mt-3 text-gray-400 w-60">A passionate Frontend Developer who loves building interactive UIs</p>
           </div>
 
           <div className="quick">
             <h2 className="text-2xl text-[#E6E6E6] mb-2">Quick Links</h2>
-            <ul className="space-y-1 list-none p-0 m-0">
-              <li><a className="text-gray-400 hover:text-gray-200 transition" href="#home">Home</a></li>
-              <li><a className="text-gray-400 hover:text-gray-200 transition" href="#about">About</a></li>
-              <li><a className="text-gray-400 hover:text-gray-200 transition" href="#skills">Skills</a></li>
-              <li><a className="text-gray-400 hover:text-gray-200 transition" href="#projects">Projects</a></li>
-              <li><a className="text-gray-400 hover:text-gray-200 transition" href="#contact">Contact</a></li>
+            <ul className="space-y-1 list-none p-0 m-0 flex-col justify-start">
+              <li className='flex justify-start'><a className="text-gray-400 hover:text-gray-200 transition" href="#home">Home</a></li>
+              <li className='flex justify-start'><a className="text-gray-400 hover:text-gray-200 transition" href="#about">About</a></li>
+              <li className='flex justify-start'><a className="text-gray-400 hover:text-gray-200 transition" href="#skills">Skills</a></li>
+              <li className='flex justify-start'><a className="text-gray-400 hover:text-gray-200 transition" href="#projects">Projects</a></li>
+              <li className='flex justify-start'><a className="text-gray-400 hover:text-gray-200 transition" href="#contact">Contact</a></li>
             </ul>
           </div>
           <div className=" ">
@@ -74,10 +74,11 @@ export default function Footer() {
 
         <div className="border-t border-[#5c5c5cff] mt-8 pt-6" />
 
-          <p className="text-sm mt-4 text-gray-600 dark:text-gray-400 font-sans">
-            &copy; {new Date().getFullYear()} Tharun Prasad K. All rights reserved.
-          </p>
+          
       </div>
+      <p className="text-sm mt-4 text-gray-600 dark:text-gray-400 font-sans h-5">
+            &copy; {new Date().getFullYear()} Tharun Prasad K.
+      </p>
     </footer>
   );
 }
