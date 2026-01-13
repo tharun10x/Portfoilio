@@ -45,7 +45,7 @@ function Navbar() {
         paddingBottom: scrolled ? '0.5rem' : '0.5rem'
       }}
       transition={{ type: 'spring', stiffness: 90, damping: 16, mass: 1 }}
-  className={`sticky top-2 md:top-1 z-50 flex w-[95%] sm:w-[90%] md:w-[85%] lg:w-[80%] xl:w-[1280px] max-w-[1400px] mx-auto items-center justify-between gap-x-4 md:gap-x-10 lg:gap-x-12 px-4 sm:px-6 lg:px-8 pr-14 border border-white/5 bg-white/3 backdrop-blur-lg rounded-xl transition-all duration-300 ${
+  className={`sticky top-2 md:top-1 z-50 flex w-[95%] sm:w-[90%] md:w-[85%] lg:w-[80%] xl:w-[1280px] max-w-[1200px] mx-auto items-center justify-between gap-x-4 md:gap-x-10 lg:gap-x-12 px-4 sm:px-6 lg:px-8 pr-14 border border-white/5 bg-white/3 backdrop-blur-lg rounded-xl transition-all duration-300 ${
     scrolled ? 'text-lg lg:text-2xl py-1' : 'text-xl lg:text-3xl py-2'
   }`}
     >

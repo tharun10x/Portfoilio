@@ -6,7 +6,7 @@ const ProfileCardComponent = lazy(() => import('../blocks/Components/ProfileCard
 function About() {
   return (
     <>
-      <div className="h-full">
+      {/* <div className="h-full"> */}
         <div className="mt-1 h-10">
           <div className="title w-full flex flex-col items-center justify-center">
             <h1 className="text-3xl">About me</h1>
@@ -16,7 +16,7 @@ function About() {
             <ProfileCardComponent className="mt-20 absolute left-80" />
           </Suspense>
         </div>
-      </div>
+      {/* </div> */}
     </>
   );
 }

@@ -23,6 +23,7 @@ const Bg = () => {
         height: '100dvh',
         zIndex: -1,
         backgroundColor: '#0F0F1B',
+        opacity:0.8
       }}
     />
   );

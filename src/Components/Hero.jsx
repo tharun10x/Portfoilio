@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion'
-import { ArrowDownTrayIcon, RiGithubLine, FiLinkedin, HiMail, FaDiagramProject, FaPaperPlane } from '../icons'
+import { ArrowDownTrayIcon, RiGithubLine, FiLinkedin, HiMail, FaDiagramProject, FaPaperPlane,FiInstagram } from '../icons'
 import { scrollToId } from '../utils/scroll'
 import Arrow from './Arrow'
 import Button from './ui/Button'
@@ -22,7 +22,7 @@ function Hero(){
         variants={containerVariants}
         initial="hidden"
         animate="show"
-        className=" sm:mt-5 h-screen w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 rounded-2xl bg-transparent backdrop-blur-[3px] md:border-[#00FFFF] md:border-2 shadow-2xl flex flex-col items-center justify-center "
+        className=" sm:mt-5 h-lvh w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 rounded-2xl bg-transparent backdrop-blur-[3px] md:border-[#00FFFF] md:border-2 shadow-2xl flex flex-col items-center justify-center "
       >
       
         <motion.h1
@@ -88,11 +88,16 @@ function Hero(){
               <FiLinkedin className='w-10 h-10 text-[#e6e6e6] cursor-pointer transition duration-300 hover:text-[#66a6ff] hover:drop-shadow-[0_0_10px_#66a6ff] transform hover:scale-110 active:scale-95' />
             </a>
           </motion.span>
+          <motion.span variants={iconItemVariants}>
+            <a href="https://www.instagram.com/tharun.10l/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className='focus:outline-none focus-visible:ring focus-visible:ring-[#66a6ff]/15 rounded'>
+              <FiInstagram className='w-10 h-10 text-[#e6e6e6] cursor-pointer transition duration-300 hover:text-[#e94095] hover:drop-shadow-[0_0_10px_#F52757] transform hover:scale-110 active:scale-95' />
+            </a>
+          </motion.span>
         </motion.div>
         <div className="flex justify-center mt-8 sm:mt-10">
         <Arrow
           onClick={() => scrollToId('about', 20)}
-          className="hover:drop-shadow-[0_0_15px_#E6E6E6] transition ease-in-out duration-300"
+          className="mt-5 hover:drop-shadow-[0_0_15px_#E6E6E6] transition ease-in-out duration-300"
         />
       </div>
       </motion.div>

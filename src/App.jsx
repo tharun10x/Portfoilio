@@ -10,6 +10,7 @@ import Footer from './Components/footer'
 function App() {
   return (
     <>
+    <div>
       <Bg />
       <Navbar className="flex justify-center"/>
 
@@ -17,11 +18,11 @@ function App() {
         <Hero />
       </main>
 
-      <section id="about" className="about static max-w-4xl mx-auto px-6 leading-relaxed text-[#E6E6E6] flex items-center justify-center min-h-[50vh]" aria-label="About section">
+      <section id="about" className="about py-10 static max-w-4xl mx-auto px-5 leading-relaxed text-[#E6E6E6] flex items-center justify-center" aria-label="About section">
         
         <About />
       </section>
-
+    </div>
       <section id="skills" className="min-h-[50vh]" aria-label="Skills section" >
 
       </section>
@@ -32,7 +33,7 @@ function App() {
       </section>
       
       {/* Combined matte black background section for contact and footer */}
-      <div className="w-screen bg-[#09090b] relative left-1/2 right-1/2 -mx-[50vw]">
+      <div className="w-screen opacity-80 backdrop-blur-3xl scroll-me-1 bg-[#09090b] relative left-1/2 right-1/2 -mx-[50vw]">
         
         <Footer />
       </div>
